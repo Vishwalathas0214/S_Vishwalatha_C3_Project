@@ -64,5 +64,10 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+    public int getOrdersValue(List<String> selectedItems){
+        int price = 0;
+
+        return price;
+    }
 
 }

@@ -2,6 +2,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+
 import org.mockito.Mock;
 import org.mockito.Mockito;
 
@@ -64,4 +66,13 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void get_selectedItems_Value(){
+        ArrayList<String> Items = new ArrayList<String>();
+        Items.add("Sweet corn soup");
+        Items.add("Vegetable lasagne");
+        assertEquals(388,restaurant.getOrdersValue(Items));
+    }
 }
+
